@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="Contact form.css" />
+	</head>
+	
+	<div class="topnav" id="myTopnav">
+		<a href="file:///C:/Users/User/Desktop/DIT/CSS/Internal%20Design.html" class="active">Home</a>
+		<a href="file:///C:/Users/User/Desktop/DIT/CSS/Contact%20form.html">Contact</a>
+		<a href="file:///C:/Users/User/Desktop/DIT/CSS/staff%20page.html">Staff</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+
+	</div>
+	
+<div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+	  <option value="usa">New Zealand</option>
+	  <option value="usa">Somalia</option>
+	  <option value="usa">Ireland</option>
+	  <option value="usa">South Africa</option>
+	  <option value="usa">Saudi Arabia</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+</html>
