@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<title>Internal Web Design</title>
+		<link rel="stylesheet" href="Internal Design.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	
+	<body>
+	<div class="bg-image"></div>
+	
+	<div class="topnav" id="myTopnav">
+		<a href="file:///C:/Users/User/Desktop/DIT/CSS/Internal%20Design.html" class="active">Home</a>
+		<a href="file:///C:/Users/User/Desktop/DIT/CSS/Contact%20form.html">Contact</a>
+		<a href="file:///C:/Users/User/Desktop/DIT/CSS/staff%20page.html">Staff</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	
+	<div class="bg-text">
+		<h1>Marcus' Photo Gallery of Random Items</h1>
+		<p>The best images for your personal use!</p>
+	</div>
+		
+	<div class="Tbutton">
+	<button onclick="scrollWin()">Click me to scroll to images</button><br><br>
+	</div>
+	
+	<div class="gallery">
+		<a target="_blank" href="img_5terre.jpg">
+			<img src="JS.jpg" alt="Cinque Terre" width="600" height="400">
+		</a>
+	<div class="desc">Add a description of the image here</div>
+	</div>
+
+	<div class="gallery">
+		<a target="_blank" href="img_forest.jpg">
+			<img src="BEATS.jpg" alt="Forest" width="600" height="400">
+		</a>
+	<div class="desc">Add a description of the image here</div>
+	</div>
+
+	<div class="gallery">
+		<a target="_blank" href="img_lights.jpg">
+		</a>
+			<img src="KYRIE.jpg" alt="Northern Lights" width="600" height="400">
+	<div class="desc">Add a description of the image here</div>
+	</div>
+
+	<div class="gallery">
+		<a target="_blank" href="img_mountains.jpg">
+			<img src="2K.jpg" alt="Mountains" width="600" height="400">
+		</a>
+	<div class="desc">Add a description of the image here</div>
+	</div>
+	
+	<div class="Bbutton">
+		<button onclick="topFunction()" id="Btn" title="Go to top"> Back to Top</button>
+	</div>
+	
+</html>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<script>
+function scrollWin() {
+  window.scrollTo(0, 380);
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<script>
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
